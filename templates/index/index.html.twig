@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello IndexController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello {{ controller_name }}! ✅</h1>
+
+    This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code><a href="{{ 'D:/wamp64/www/symfony_lsr/src/Controller/IndexController.php'|file_link(0) }}">src/Controller/IndexController.php</a></code></li>
+        <li>Your template at <code><a href="{{ 'D:/wamp64/www/symfony_lsr/templates/index/index.html.twig'|file_link(0) }}">templates/index/index.html.twig</a></code></li>
+    </ul>
+
+    <!-- symfony-ux -->
+    <div data-controller="hello"></div>
+
+    <hr>
+
+    <h1 class="animate__animated animate__bounce">An animated element <i class="fab fa-symfony" id="icon-symfony"></i></h1>
+
+    <hr>
+
+    <form action="" method="post" enctype="multipart/form-data">
+        <input type="file">
+        <button type="submit">submit</button>
+    </form>
+
+    <hr>
+
+    <!--
+    <a href="" download="entity.filename" target="_blank">
+        <img src="" alt="" width="250px" height="250px">
+        Click to download
+    </a>
+    -->
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function (event) {
+        console.log({vanilla: event});
+        let iconSymfony = document.getElementById('icon-symfony');
+        iconSymfony.onclick = function () {};
+        iconSymfony.addEventListener('click', function () {});
+    })
+</script>
+{% endblock %}
