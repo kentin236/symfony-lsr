@@ -12,9 +12,13 @@
         {% endblock %}
     </head>
     <body>
-        {% include 'flash_messages.html.twig' %}
+        {% block header %}{% endblock %}
+
+        {% include '_flash_messages.html.twig' %}
 
         {% block body %}{% endblock %}
+
+        {% block footer %}{% endblock %}
 
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
